@@ -1,0 +1,18 @@
+.header {
+  background-color: #23439c;
+  height: 60px;
+  width: 100%;
+}
+
+.header__inner {
+  padding: 0 10px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}

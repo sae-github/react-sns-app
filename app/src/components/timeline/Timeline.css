@@ -1,0 +1,9 @@
+.timeline {
+  padding: 30px 0;
+}
+
+.timeline__inner {
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}

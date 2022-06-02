@@ -12,6 +12,16 @@ router.post("/", async (req, res) => {
   }
 });
 
+//　全ての投稿を取得する
+router.get("/", async (req, res) => {
+  try {
+    const post = await Post.find();
+    return res.status(200).json(post);
+  } catch (err) {
+    return res.status(403).json(err);
+  }
+});
+
 //　指定したカテゴリーのデータを取得する
 router.get("/category/:category", async (req, res) => {
   try {
@@ -21,6 +31,7 @@ router.get("/category/:category", async (req, res) => {
     return res.status(403).json(err);
   }
 });
+
 
 // 投稿を取得する
 router.get("/:id", async (req, res) => {
