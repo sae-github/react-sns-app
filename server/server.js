@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-
+const cors = require('cors')
 const mongoose = require("mongoose");
 const PORT = 3001;
 require("dotenv").config();
-
+app.use(cors())
 //DB接続
 mongoose.connect(process.env.MONGODB_URL)
   .then(() => {
