@@ -1,0 +1,17 @@
+.single {
+  margin-top: 30px;
+}
+
+.single__inner {
+  width: 1040px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.single__box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: -3px 6px 20px -11px #a6a6a6;
+  padding: 30px;
+}
