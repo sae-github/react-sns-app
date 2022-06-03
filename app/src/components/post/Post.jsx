@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Post.css";
 
 export const Post = ({ post }) => {
@@ -11,9 +12,11 @@ export const Post = ({ post }) => {
           <p className="post-card__author-name">Name</p>
         </div>
         <div className="post-card__body">
+          <p className="post-card__title">{post.title}</p>
           <div className="post-card__content">
-            {/* <div className="post-card__title">{post.title}</div> */}
-            <div className="post-card__text">{post.content}</div>
+            <div className="post-card__text-wrapper">
+              <div className="post-card__text">{post.content}</div>
+            </div>
             {post.thumbnail && (
               <div className="post-card__img-wrapper">
                 <img src={post.thumbnail} alt="" />

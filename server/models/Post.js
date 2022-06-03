@@ -15,6 +15,10 @@ const PostSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  userId: {
+    type: String,
+    required: true
+  },
   thumbnail: {
     type: String,
     default: ""
