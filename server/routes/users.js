@@ -4,9 +4,9 @@ const User = require("../models/User");
 // 特定のユーザーの取得
 router.get("/:id", async (req, res) => {
   try {
-    const res = await User.findById(req.params.id);
-    const { password, updatedAt, ...other } = res._doc;
-    return res.status(200).json(other);
+    const user = await User.findById(req.params.id);
+    const { password, updatedAt, ...other } = user._doc;
+    res.status(200).json(other);
   } catch (err) {
     return res.status(500).json(err);
   }
