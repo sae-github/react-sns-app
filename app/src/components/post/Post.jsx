@@ -1,7 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Post.css";
 
 export const Post = ({ post }) => {
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    const getUserData = async () => {
+      try {
+        const res = await fetch(
+          `http://localhost:3001/api/users/${post.userId}`
+        );
+        const json = await res.json();
+        setUser(json);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getUserData();
+  }, [post.userId]);
+
   return (
     <article className="post-card">
       <div className="post-card__inner">
@@ -9,7 +26,7 @@ export const Post = ({ post }) => {
           <div className="post-card__icon-wrapper">
             <img src="https://i.postimg.cc/nhrTHpdw/user-icon.png" alt="" />
           </div>
-          <p className="post-card__author-name">Name</p>
+          <p className="post-card__author-name">{user.username}</p>
         </div>
         <div className="post-card__body">
           <p className="post-card__title">{post.title}</p>
