@@ -1,6 +1,6 @@
-import { Article } from "../../components/article/Article";
-import { Header } from "../../components/header/Header";
-import "./Single.css";
+import { Article } from '../../components/article/Article';
+import { Header } from '../../components/header/Header';
+import './Single.css';
 
 export const Single = () => {
   return (
