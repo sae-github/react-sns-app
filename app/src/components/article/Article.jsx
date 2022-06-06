@@ -1,5 +1,5 @@
-import { Comment } from "../comment/Comment";
-import "./Article.css";
+import { Comment } from '../comment/Comment';
+import './Article.css';
 
 export const Article = () => {
   return (

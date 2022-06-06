@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import "./Post.css";
+import { useEffect, useState } from 'react';
+import './Post.css';
 
 export const Post = ({ post }) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState('');
 
   useEffect(() => {
     const getUserData = async () => {
