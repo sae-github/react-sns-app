@@ -13,6 +13,19 @@
     "stylelint-config-standard": "^25.0.0",
     "web-vitals": "^2.1.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,css}": [
+      "prettier --write"
+    ],
+    "src/**/*.css": [
+      "stylelint --fix"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -44,18 +57,5 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.0",
     "prettier": "2.6.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,css}": [
-      "prettier --write"
-    ],
-    "src/**/*.css": [
-      "stylelint --fix"
-    ]
   }
 }
