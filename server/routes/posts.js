@@ -32,7 +32,6 @@ router.get("/category/:category", async (req, res) => {
   }
 });
 
-
 // 投稿を取得する
 router.get("/:id", async (req, res) => {
   try {
