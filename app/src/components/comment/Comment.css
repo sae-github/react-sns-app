@@ -1,0 +1,21 @@
+.comment-item + .comment-item {
+  margin-top: 20px;
+}
+
+.comment-item__wrapper {
+  display: flex;
+}
+
+.comment-item__icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.comment-item__name {
+  font-size: 15px;
+}
+
+.comment-item__text {
+  margin-top: 10px;
+}

@@ -42,4 +42,17 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// コメントの投稿
+router.post("/:id/comment", async (req, res) => {
+  try {
+    await Post.findByIdAndUpdate(req.params.id, {
+      $push: { comments: req.body },
+    });
+    return res.status(200).json("コメントが投稿されました");
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json(error);
+  }
+});
+
 module.exports = router;
