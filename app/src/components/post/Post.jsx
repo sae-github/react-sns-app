@@ -60,7 +60,7 @@ export const Post = ({ post }) => {
                   alt=""
                 />
                 <span className="post-card__comment-text">
-                  {post.comment.length}
+                  {post.comments.length}
                 </span>
               </div>
             </div>

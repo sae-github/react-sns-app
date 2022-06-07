@@ -24,10 +24,19 @@ const PostSchema = mongoose.Schema(
       type: String,
       default: "",
     },
-    comment: {
-      type: Array,
-      default: [],
-    },
+    comments: [
+      {
+        userId: {
+          type: String,
+          required: true,
+        },
+        comment: {
+          type: String,
+          required: true,
+        },
+      },
+      { timestamps: true },
+    ],
     likes: {
       type: Array,
       default: [],

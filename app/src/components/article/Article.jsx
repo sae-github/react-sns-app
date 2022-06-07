@@ -4,8 +4,8 @@ import { Comment } from '../comment/Comment';
 import './Article.css';
 
 export const Article = () => {
-  const [article, setArticle] = useState([]);
   const { id } = useParams();
+  const [article, setArticle] = useState([]);
 
   useEffect(() => {
     const getArticleData = async () => {
@@ -18,7 +18,7 @@ export const Article = () => {
       }
     };
     getArticleData();
-  }, [id]);
+  }, []);
 
   return (
     <article className="article">
@@ -35,7 +35,42 @@ export const Article = () => {
         </figure>
       )}
       <div className="article__text">{article.content}</div>
-      <Comment />
+
+      <div className="article__comment">
+        <p className="article__comment-head">コメント</p>
+        <div className="article__comment-field">
+          <input
+            type="text"
+            name=""
+            id=""
+            className="article__comment-input"
+            placeholder="コメントを入力する"
+          />
+          <div className="article__comment-button-wrapper">
+            <button type="submit" className="article__comment-submit" disabled>
+              投稿する
+            </button>
+            <button
+              type="button"
+              className="article__comment-reset-button"
+              disabled
+            >
+              リセット
+            </button>
+          </div>
+        </div>
+        {article.comments && article.comments.length > 0 ? (
+          <ul className="article__comment-list">
+            {article.comments.map((data) => (
+              <Comment key={data.userId} commentData={data} />
+            ))}
+          </ul>
+        ) : (
+          <p className="article__not-comment-message">
+            現在コメントはありません
+          </p>
+        )}
+      </div>
     </article>
   );
 };
