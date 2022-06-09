@@ -12,8 +12,19 @@
   margin-right: 10px;
 }
 
+.comment-item__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .comment-item__name {
-  font-size: 15px;
+  margin-right: 30px;
+}
+
+.comment-item__date {
+  color: gray;
+  font-size: 14px;
 }
 
 .comment-item__text {
