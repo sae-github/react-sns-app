@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const CommentSchema = require("./Comment");
 
 const PostSchema = mongoose.Schema(
   {
@@ -24,19 +25,7 @@ const PostSchema = mongoose.Schema(
       type: String,
       default: "",
     },
-    comments: [
-      {
-        userId: {
-          type: String,
-          required: true,
-        },
-        comment: {
-          type: String,
-          required: true,
-        },
-      },
-      { timestamps: true },
-    ],
+    comments: [CommentSchema],
     likes: {
       type: Array,
       default: [],
