@@ -18,7 +18,7 @@ export const Article = () => {
       }
     };
     getArticleData();
-  }, []);
+  }, [id]);
 
   return (
     <article className="article">
