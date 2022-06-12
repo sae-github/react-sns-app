@@ -30,7 +30,7 @@ export const Comment = ({ commentData }) => {
           <div className="comment-item__meta">
             <p className="comment-item__name">{user.username}</p>
             <p className="comment-item__date">
-              {format(new Date(commentData.createdAt), 'yyyy/MM/dd')}
+              {format(new Date(commentData.createdAt), 'yyyy.MM.dd')}
             </p>
           </div>
           <p className="comment-item__text">{commentData.comment}</p>

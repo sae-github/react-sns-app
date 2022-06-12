@@ -12,6 +12,10 @@
   margin-right: 10px;
 }
 
+.comment-item__content {
+  width: 100%;
+}
+
 .comment-item__meta {
   display: flex;
   align-items: center;
@@ -29,4 +33,5 @@
 
 .comment-item__text {
   margin-top: 10px;
+  line-height: 1.5;
 }
