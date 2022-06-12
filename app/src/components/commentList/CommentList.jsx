@@ -4,8 +4,8 @@ import { Comment } from '../comment/Comment';
 export const CommentList = ({ comments }) => {
   return comments && comments.length > 0 ? (
     <ul key={comments._id} className="article__comment-list">
-      {comments.map((data) => (
-        <Comment key={comments._id} commentData={data} />
+      {comments.map((comment) => (
+        <Comment key={comment._id} commentData={comment} />
       ))}
     </ul>
   ) : (

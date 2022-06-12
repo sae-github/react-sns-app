@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Comment } from '../comment/Comment';
 
 import { CommentInputField } from '../commentInputField/CommentInputField';
 import { CommentList } from '../commentList/CommentList';
