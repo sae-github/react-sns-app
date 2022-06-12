@@ -1,11 +1,10 @@
-import React from 'react';
-import { Comment } from '../comment/Comment';
+import { CommentPost } from './CommentPost';
 
 export const CommentList = ({ comments }) => {
   return comments && comments.length > 0 ? (
     <ul key={comments._id} className="article__comment-list">
       {comments.map((comment) => (
-        <Comment key={comment._id} commentData={comment} />
+        <CommentPost key={comment._id} commentData={comment} />
       ))}
     </ul>
   ) : (
