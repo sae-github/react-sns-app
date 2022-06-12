@@ -7,7 +7,7 @@ export const Comment = ({ commentData, articleId }) => {
     <div className="article__comment">
       <p className="article__comment-head">コメント</p>
       <CommentInputField id={articleId} />
-      <CommentList comments={commentData} />
+      <CommentList commentData={commentData} />
     </div>
   );
 };

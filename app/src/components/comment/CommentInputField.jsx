@@ -4,7 +4,6 @@ export const CommentInputField = ({ id }) => {
   const [comment, setComment] = useState('');
   const onClickSubmit = async (event) => {
     event.preventDefault();
-
     try {
       await fetch(`http://localhost:3001/api/posts/${id}/comment`, {
         method: 'POST',
