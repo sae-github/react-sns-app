@@ -17,7 +17,7 @@ export const CommentInputField = ({ id }) => {
         }),
       });
       setComment('');
-      window.location.reload(false);
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
