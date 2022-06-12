@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-import { CommentInputField } from '../commentInputField/CommentInputField';
-import { CommentList } from '../commentList/CommentList';
+import { Comment } from '../comment/Comment';
 import './Article.css';
 
 export const Article = () => {
@@ -37,11 +35,7 @@ export const Article = () => {
         </figure>
       )}
       <div className="article__text">{article.content}</div>
-      <div className="article__comment">
-        <p className="article__comment-head">コメント</p>
-        <CommentInputField id={id} />
-        <CommentList comments={article.comments} />
-      </div>
+      <Comment articleId={id} commentData={article.comments} />
     </article>
   );
 };
