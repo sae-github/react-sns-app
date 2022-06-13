@@ -3,6 +3,7 @@
 # 概要
 
 React の学習の一環として SNS 風のアプリケーションを作成しました。
+
 SNS アプリケーションによくある機能の実装を組み込みました.
 
 現在開発中ですが、開発の様子や進捗は 本リポジトリ内の [diary ディレクトリ](https://github.com/sae-github/react-sns-app/tree/master/diary)で記録しています
