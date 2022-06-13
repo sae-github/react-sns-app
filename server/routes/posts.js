@@ -42,6 +42,30 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// favorite 登録 or 解除
+router.put("/:id/favorite", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    if (!post.likes.includes(req.body.userId)) {
+      await post.updateOne({
+        $push: {
+          likes: req.body.userId,
+        },
+      });
+      return res.status(200).json("投稿をお気に入りに登録しました");
+    } else {
+      await post.updateOne({
+        $pull: {
+          likes: req.body.userId,
+        },
+      });
+      return res.status(200).json("投稿をお気に入りから解除しました");
+    }
+  } catch (err) {
+    return res.status(403).json(err);
+  }
+});
+
 // コメントの投稿
 router.post("/:id/comment", async (req, res) => {
   try {

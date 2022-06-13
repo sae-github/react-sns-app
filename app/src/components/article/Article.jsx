@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Comment } from '../comment/Comment';
+import { Favorite } from '../favorite/Favorite';
 import './Article.css';
 
 export const Article = () => {
   const { id } = useParams();
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState('');
 
   useEffect(() => {
     const getArticleData = async () => {
@@ -24,10 +25,7 @@ export const Article = () => {
     <article className="article">
       <div className="article__head">
         <h1 className="article__title">{article.title}</h1>
-        <div className="article__favorite">
-          <button className="article__favorite-icon"></button>
-          <span className="article__favorite-text"></span>
-        </div>
+        <Favorite article={article} />
       </div>
       {article.thumbnail && (
         <figure className="article__img-wrapper">
