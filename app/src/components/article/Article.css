@@ -1,11 +1,39 @@
 .article__head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .article__title {
   font-size: 18px;
+  line-height: 1.5;
   font-weight: bold;
+}
+
+.article__favorite-icon {
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-size: contain;
+}
+
+.article__favorite-icon:hover {
+  opacity: 0.7;
+}
+
+.article__favorite-icon[data-favorite-action="unregistered"] {
+  background-image: url("https://i.postimg.cc/L4wBvGdy/heart.png");
+}
+
+.article__favorite-icon[data-favorite-action="registered"] {
+  background-image: url("https://i.postimg.cc/4NGHbgj2/favorite-icon.png");
+}
+
+.article__favorite-text {
+  font-size: 14px;
+  margin-right: 3px;
 }
 
 .article__img-wrapper {
