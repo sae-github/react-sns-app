@@ -1,4 +1,5 @@
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
   return (
@@ -21,7 +22,9 @@ export const Login = () => {
             className="login__field"
           />
           <button className="login__button">Login</button>
-          <p className="login__link">Create Account</p>
+          <p className="login__link">
+            <Link to="/register">Create Account</Link>
+          </p>
         </div>
         <div className="login__img-wrapper">
           <img src="./assets/images/login.svg" alt="" />
