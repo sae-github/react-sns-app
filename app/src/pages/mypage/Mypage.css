@@ -1,0 +1,10 @@
+.my-page {
+  margin-top: 30px;
+}
+
+.my-page__inner {
+  width: 1040px;
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
